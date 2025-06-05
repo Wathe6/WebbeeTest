@@ -1,4 +1,5 @@
 import io.envoi.io.LogReader;
+import io.envoi.model.LogEntry;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -12,7 +13,13 @@ public class LogReaderTest {
         List<File> logFiles = reader.getLogFiles();
         for (File logFile : logFiles) {
             System.out.println("Найден лог-файл: " + logFile.getName());
+
+            List<LogEntry> logEntries = reader.readLogs(logFile);
+            for(LogEntry log : logEntries) {
+                System.out.println(log.toString());
+            }
         }
+
     }
 
 }

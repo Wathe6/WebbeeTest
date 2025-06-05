@@ -2,6 +2,9 @@ package io.envoi.util;
 
 import java.util.regex.Pattern;
 
+/**
+ * Contains patterns for String matching.
+ * */
 public final class LogPatterns {
     private LogPatterns() {}
 
